@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Offer Job</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 90%;
+        max-width: 1200px;
+        flex-wrap: wrap;
+    }
+
+    /* Individual box styling */
+    .box {
+        flex: 1 1 calc(50% - 20px);
+        /* Adjusts to 50% width on medium and large screens */
+        max-width: calc(50% - 20px);
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Default shadow */
+        padding: 20px;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-100%);
+        /* Keep this for the slide-in animation */
+        animation: slideInLeft 1s ease-out forwards;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:nth-child(2) {
+        transform: translateX(100%);
+        animation: slideInRight 1s ease-out forwards;
+    }
+
+    /* Zoom effect on hover */
+    .box:hover {
+        transform: scale(1.05) translateX(0);
+        /* Apply zoom on hover with translateX(0) to override the initial animation */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Stronger shadow on hover */
+    }
+
+    .icon {
+        font-size: 50px;
+        color: #e91e63;
+        margin-bottom: 10px;
+    }
+
+    .box h3 {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .box p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* Button styling */
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #e91e63;
+        color: #fff;
+        /* Default white text */
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .btn:hover {
+        background-color: #1f1d1d;
+        /* Grey button background */
+        color: #fff;
+        /* Text remains white */
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .box {
+            flex: 1 1 100%;
+            /* Full width on tablets */
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .icon {
+            font-size: 40px;
+            /* Smaller icons for smaller screens */
+        }
+
+        .box h3 {
+            font-size: 16px;
+        }
+
+        .box p {
+            font-size: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            /* Smaller buttons for mobile */
+            font-size: 12px;
+        }
+    }
+
+    /* Animations */
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInRight {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .main-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        /* Adjust the container height */
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .image-container {
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: translateX(-100%);
+        animation: slideInLeft 1s ease-out forwards;
+    }
+
+    .text-container {
+        width: 50%;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-family: "Inter";
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .read-more-btn {
+        padding: 10px 20px;
+        background-color: #e91e63;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+        background-color: #2f282b;
+    }
+
+    @media (max-width: 768px) {
+        .main-container {
+            flex-direction: column;
+            height: auto;
+            /* Let content adjust the height */
+        }
+
+        .image-container,
+        .text-container {
+            width: 100%;
+        }
+    }
+
+    .container-1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Card styling */
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Hover effect for cards */
+    .card:hover {
+        transform: scale(1.05);
+        /* Slight zoom effect */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .card {
+            width: 200px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .card {
+            width: 150px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="Logo"
+                style="height: 50px; width: 55px; border-radius: 100%;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><b style="color: white;">Home</b></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html"><b style="color: white;">Services</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><b style="color: white;">About Us</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><b style="color: white;">Contact Us</b></a>
+                </li>
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="box">
+            <div class="icon"><i class="fas fa-search"></i></div>
+            <h3>Job Seeker</h3>
+            <p>Candidate looking for jobs</p>
+            <a href="#" class="btn">Click now</a>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fas fa-briefcase"></i></div>
+            <h3>Business Tie up</h3>
+            <p>Employers looking for Candidates</p>
+            <a href="#" class="btn">Click now</a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="image-container">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/about-new-img.png"
+                alt="Image" class="image">
+        </div>
+        <div class="text-container">
+            <h2>Career Comfort</h2>
+            <p>Career Comfort is a Job Consultancy and Recruitment Agency having specialization in reducing the clutter
+                and streamline the manpower hunting for the companies no matter how Big or Small. We provide end to end
+                hiring solutions. Thus, acting as a Platform. We bridge the gap between the leading companies and the
+                Career Aspirants. We act as a link between Companies that offer Jobs in various areas and the Job
+                seekers. We also act as a guide to the Job searchers and help them with their Career prospects. We have
+                our expertise in this domain to offer specific solutions for different needs and purposes to both
+                Employers as well as Prospective Candidates. </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <h1>Industries We Cater</h1>
+
+    <div class="container-1">
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/center.png" alt="BPO/KPO/Call Center">
+            <p>BPO / KPO / CALL CENTER</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/it.png" alt="IT & ITES">
+            <p>IT & ITES</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/education.png" alt="Education">
+            <p>EDUCATION</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/fmcg.png" alt="FMCG">
+            <p>FMCG</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/health.png" alt="Life & Health Insurance">
+            <p>LIFE & HEALTH INSURANCE</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/real-estate.png" alt="Real Estate & Housing">
+            <p>REAL ESTATE & HOUSING</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/bank.png" alt="Bank & Financial Institutions">
+            <p>BANK & FINANCIAL INSTITUTIONS</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/12/h2.png" alt="Pharmaceutical & Hospitals">
+            <p>PHARMACEUTICAL & HOSPITALS</p>
+        </div>
+    </div>
+    <script>
+        const industries = [
+            { name: 'BPO / KPO / CALL CENTER', icon: 'bpo-icon.svg' },
+            { name: 'IT & ITES', icon: 'it-icon.svg' },
+            // ... other industries
+        ];
+
+        const container1 = document.querySelector('.container-1'); /* Renamed container */
+
+        industries.forEach(industry => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const img = document.createElement('img');
+            img.src = industry.icon;
+            img.alt = industry.name;
+
+            const p = document.createElement('p');
+            p.textContent = industry.name;
+
+            card.appendChild(img);
+            card.appendChild(p);
+
+            container1.appendChild(card); /* Renamed container */
+        });
+    </script>
+
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="logo.png" alt="Career Comfort Logo" class="logo">
+                    <p>
+                        India's best Job Consultancy and Recruitment Agency offering both work-from-home and office
+                        jobs. Find the best jobs for yourself or hire employees for your company with the help of our
+                        professionals.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope"></i> <a
+                                href="mailto:letsofferjob@gmail.com">letsofferjob@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> +91 85550 79906</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Vijaywada, India</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://youtube.com/@letsofferjob?si=lAPZToRRHPudoyaP" class="fab fa-youtube"
+                            aria-label="YouTube"></a>
+
+                        <a href="#" class="fab fa-linkedin-in" aria-label="LinkedIn"></a>
+                        <a href="https://www.instagram.com/letsofferjob?igsh=c2hwcThueHY3enk=" class="fab fa-instagram"
+                            aria-label="Instagram"></a>
+                        <a href="https://t.me/letsofferjob" class="fab fa-telegram-plane" aria-label="Telegram"></a>
+                        <a href="#" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
+                        <a href="mailto:letsofferjob@gmail.com" class="fas fa-envelope" aria-label="Gmail"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <p>&copy; 2024 Lets Offer Job - Job Revolution. All rights reserved.</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
