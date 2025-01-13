@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lets Offer Job</title>
+    <title>Future Path IT Solutions</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -96,6 +96,9 @@
             flex: 1 1 100%;
             /* Full width on tablets */
             max-width: 100%;
+            animation: slideInLeft 2s ease-out forwards;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
     }
 
@@ -218,6 +221,11 @@
         .image-container,
         .text-container {
             width: 100%;
+
+        }
+        .text-container p{
+            font-size: 16px;
+
         }
     }
 
@@ -227,7 +235,22 @@
         justify-content: center;
         gap: 20px;
         padding: 20px;
+        animation: slideInLeft 5s ease-out forwards;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .container-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        animation: slideInRight 5s ease-out forwards;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
 
     /* Card styling */
     .card {
@@ -239,11 +262,11 @@
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .card img {
@@ -269,13 +292,13 @@
     /* Responsive styles */
     @media (max-width: 768px) {
         .card {
-            width: 200px;
+            width: 250px;
         }
     }
 
     @media (max-width: 480px) {
         .card {
-            width: 150px;
+            width: 250px;
         }
 
         h1 {
@@ -283,25 +306,36 @@
         }
     }
 
+    .bye-1 {
+        animation: slideInRight 2s ease-out forwards;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bye-2 {
+        animation: slideInLeft 2s ease-out forwards;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
     .hero-container {
-  position: relative;
-  height: 500px; /* Adjust the height */
-  background-image: url('your-image.jpg'); /* Replace with your image */
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
+        position: relative;
+        height: 750px;
+        /* Adjust the height */
+        background-image: url(https://designtemplate.tech/images/Digital%20Skyline%20with%20Light%20Trails%20Modern%20Video-HD.webp);
+        /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
 
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-
-
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 </style>
 
 <body>
@@ -335,7 +369,8 @@
 
     <div class="hero-container">
         <div class="overlay-text">
-            <h1>Find Your Dream Job</h1>
+            <h1 class="bye-1"><b>India's Best Talent Acqusition </b></h1>
+            <h1 class="bye-2"><b> And Job Placement Consultancy</b></h1>
             <a href="#job-search" class="btn">Job Search</a>
         </div>
     </div>
@@ -370,50 +405,69 @@
                 Employers as well as Prospective Candidates. </p>
             <a href="#" class="btn">Read More</a>
         </div>
-    </div>
+    </div><br>
 
-    <h1>Industries We Cater</h1>
-
+    <center><b>
+            <h1>Industries We Cater</h1>
+        </b>
+    </center>
     <div class="container-1">
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/center.png" alt="BPO/KPO/Call Center">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/center.png"
+                alt="BPO/KPO/Call Center">
             <p>BPO / KPO / CALL CENTER</p>
         </div>
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/it.png" alt="IT & ITES">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/it.png"
+                alt="IT & ITES">
             <p>IT & ITES</p>
         </div>
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/education.png" alt="Education">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/education.png"
+                alt="Education">
             <p>EDUCATION</p>
         </div>
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/fmcg.png" alt="FMCG">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/fmcg.png"
+                alt="FMCG">
             <p>FMCG</p>
         </div>
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/health.png" alt="Life & Health Insurance">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/health.png"
+                alt="Life & Health Insurance">
             <p>LIFE & HEALTH INSURANCE</p>
         </div>
+
+    </div>
+    <div class="container-2">
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/real-estate.png" alt="Real Estate & Housing">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/real-estate.png"
+                alt="Real Estate & Housing">
             <p>REAL ESTATE & HOUSING</p>
         </div>
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/bank.png" alt="Bank & Financial Institutions">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/bank.png"
+                alt="Bank & Financial Institutions">
             <p>BANK & FINANCIAL INSTITUTIONS</p>
         </div>
         <div class="card">
-            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/12/h2.png" alt="Pharmaceutical & Hospitals">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/12/h2.png"
+                alt="Pharmaceutical & Hospitals">
             <p>PHARMACEUTICAL & HOSPITALS</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/center.png"
+                alt="BPO/KPO/Call Center">
+            <p>BPO / KPO / CALL CENTER</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-ikplgid.nitrocdn.com/CBnPWTxXvlQldqPwhUtLUzGDtuHrPyuF/assets/images/optimized/rev-1b4aa66/www.careercomfort.co.in/wp-content/uploads/2021/10/it.png"
+                alt="IT & ITES">
+            <p>IT & ITES</p>
         </div>
     </div>
     <script>
-        const industries = [
-            { name: 'BPO / KPO / CALL CENTER', icon: 'bpo-icon.svg' },
-            { name: 'IT & ITES', icon: 'it-icon.svg' },
-            // ... other industries
-        ];
+
 
         const container1 = document.querySelector('.container-1'); /* Renamed container */
 
