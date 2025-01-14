@@ -4,12 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Path IT Solutions</title>
+    <title>Lets Offer Job</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <style>
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: transparent;
+        /* Default transparent */
+        transition: background-color 0.3s ease-in-out;
+        padding: 10px 20px;
+    }
+    .navbar ul{
+        background-color: #808000;
+    }
+
+    .navbar.scrolled {
+        background-color: #808000;
+        /* Olive color */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+
     .container {
         display: flex;
         justify-content: center;
@@ -223,7 +245,8 @@
             width: 100%;
 
         }
-        .text-container p{
+
+        .text-container p {
             font-size: 16px;
 
         }
@@ -318,6 +341,11 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .card.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .hero-container {
         position: relative;
         height: 750px;
@@ -339,8 +367,22 @@
 </style>
 
 <body>
+    <div class="social-bar">
+        <a href="https://www.instagram.com" target="_blank" class="social-icon instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook">
+        </a>
+        <a href="mailto:example@gmail.com" class="social-icon gmail">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" class="social-icon whatsapp">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+    </div>
 
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="Logo"
                 style="height: 50px; width: 55px; border-radius: 100%;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -366,6 +408,8 @@
         </div>
 
     </nav>
+    <script src="script.js"></script>
+
 
     <div class="hero-container">
         <div class="overlay-text">
@@ -395,8 +439,9 @@
                 alt="Image" class="image">
         </div>
         <div class="text-container">
-            <h2>Career Comfort</h2>
-            <p>Career Comfort is a Job Consultancy and Recruitment Agency having specialization in reducing the clutter
+            <h2 style="font-size: 30px;">Future Path IT Solutions</h2>
+            <p> Future Path IT Solutions is a Job Consultancy and Recruitment Agency having specialization in reducing
+                the clutter
                 and streamline the manpower hunting for the companies no matter how Big or Small. We provide end to end
                 hiring solutions. Thus, acting as a Platform. We bridge the gap between the leading companies and the
                 Career Aspirants. We act as a link between Companies that offer Jobs in various areas and the Job
@@ -487,6 +532,10 @@
 
             container1.appendChild(card); /* Renamed container */
         });
+
+        // Select the navbar
+
+
     </script>
 
 
@@ -533,6 +582,36 @@
             <p>&copy; 2024 Lets Offer Job - Job Revolution. All rights reserved.</p>
         </div>
     </div>
+    <script>
+        // Select all the cards
+        const cards = document.querySelectorAll('.card');
+
+        // Observer options
+        const options = {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+        };
+
+        // Intersection Observer callback
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the "show" class to make the card appear
+                    entry.target.classList.add('show');
+                    // Stop observing the current card
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        // Create the Intersection Observer
+        const observer = new IntersectionObserver(observerCallback, options);
+
+        // Observe each card
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+
+    </script>
 
 
 
