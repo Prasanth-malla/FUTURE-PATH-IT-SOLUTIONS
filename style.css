@@ -10,12 +10,16 @@ body {
   
   /* Navbar Styling */
   .navbar a {
-    float: right;
+    float: middle;
     display: block;
     color: #ffffff;
     text-align: center;
+    justify-content: center;
     padding: 14px 16px;
     text-decoration: none;
+  }
+  .navbar{
+    background-color: #808000;
   }
   
   .navbar a:hover {
@@ -43,12 +47,13 @@ body {
   
   /* Footer Styling */
   .footer {
-    background-color: #333;
+    background-color:#808000;
     color: white;
     padding: 20px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+    padding-top: 100px;
   }
   
   .footer .container {
@@ -136,6 +141,7 @@ body {
     margin-top: 120px;
     margin-left: 20px;
   }
+  
 /* General Reset */
 body {
   margin: 0;
@@ -145,6 +151,7 @@ body {
   position: relative;
   min-height: 100vh;
 }
+
 /* Social Media Bar */
 .social-bar {
   position: fixed;
@@ -157,7 +164,7 @@ body {
   z-index: 9999;
 }
 
-.social-icon {
+.social-icon-1 {
   margin: 0px 0;
   pointer-events: auto; /* Ensures icons are clickable despite the overlay */
   display: flex;
@@ -165,13 +172,13 @@ body {
   justify-content: center;
 }
 
-.social-icon img {
+.social-icon-1 img {
   width: 30px;
   height: 30px;
  
 }
 
-.social-icon:hover {
+.social-icon-1:hover {
   transform: scale(1.1);
   background-color: #808000; 
   border-radius: 15px;/* Slightly lighter maroon on hover */
@@ -179,15 +186,13 @@ body {
 
 
 @media (max-width: 768px) {
-  .social-icon {
+  .social-icon-1 {
     width: 50px;
     height: 50px;
   }
 
-  .social-icon img {
+  .social-icon-1 img {
     width: 25px;
     height: 25px;
   }
 }
-
-  
