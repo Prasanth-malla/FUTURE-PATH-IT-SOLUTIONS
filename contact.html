@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Support</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .container-1 {
+      background-color: #fff;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+
+    .left-section {
+      width: 300px;
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .left-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .left-section p {
+      margin-bottom: 10px;
+    }
+
+    .left-section i {
+      margin-right: 10px;
+    }
+
+    .right-section {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    /* Responsive styles for smaller devices */
+    @media (max-width: 991.98px) {
+
+      /* Tablet View */
+      .container-1 {
+        flex-direction: column;
+        margin-top: 80px;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 20px;
+      }
+
+      .left-section {
+        border-radius: 5px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      /* Mobile View */
+
+
+      .container-1 {
+        padding: 15px;
+        margin-top: 80px;
+      }
+
+      .left-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .left-section p {
+        font-size: 14px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        padding: 8px;
+      }
+
+      button {
+        padding: 8px 15px;
+      }
+
+
+    }
+
+    @media (max-width: 575.98px) {
+
+      /* Extra Small Mobile View */
+      .container-1 {
+        padding: 15px;
+        margin-top: 80px;
+      }
+
+      .left-section {
+        text-align: center;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="Logo"
+        style="height: 50px; width: 55px; border-radius: 100%;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><b style="color: white;">Home</b></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="services.html"><b style="color: white;">Services</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><b style="color: white;">About Us</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><b style="color: white;">Contact Us</b></a>
+        </li>
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <div class="container-1">
+    <div class="left-section">
+      <h2>Contact Support</h2>
+      <p>Already a customer or need help with a billing issue?</p>
+
+      <p><i class="fas fa-map-marker-alt"></i><a style="color: white;"
+          href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No
+          112, 1st floor, Shirdi Sai Nagar, RK Hegde Nagar, Bengaluru, Karnataka, India,
+          560077.</a></p>
+      <p><i class="fas fa-envelope"></i> info@mindloads.in</p>
+      <p><i class="fas fa-phone-alt"></i> +91 86181 51740</p>
+
+      <p>Fill out your details to be contacted.</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="Your Phone">
+        </div>
+
+        <div class="form-group">
+          <label for="graduation">Year of Graduation</label>
+          <input type="date" id="graduation">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Leave your Message for Us"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="logo.png" alt="Career Comfort Logo" class="logo">
+          <p>
+            India's best Job Consultancy and Recruitment Agency offering both work-from-home and office
+            jobs. Find the best jobs for yourself or hire employees for your company with the help of our
+            professionals.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-envelope"></i> <a href="mailto:letsofferjob@gmail.com">letsofferjob@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i> +91 86181 51740
+            </li>
+            <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No
+                112, 1st floor, Shirdi Sai Nagar, RK Hegde Nagar, Bengaluru, Karnataka, India,
+                560077.</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+
+
+            <a href="#" class="fab fa-linkedin-in" aria-label="LinkedIn"></a>
+            <a href="https://www.instagram.com/letsofferjob?igsh=c2hwcThueHY3enk=" class="fab fa-instagram"
+              aria-label="Instagram"></a>
+
+            <a href="#" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
+            <a href="mailto:letsofferjob@gmail.com" class="fas fa-envelope" aria-label="Gmail"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <p>&copy; 2025 Future Path IT Solutions. All rights reserved.</p>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
