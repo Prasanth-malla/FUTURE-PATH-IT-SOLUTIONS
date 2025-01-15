@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lets Offer Job</title>
+    <title>Future Path IT Solutions</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -21,21 +21,21 @@
         transition: background-color 0.3s ease-in-out;
         padding: 10px 20px;
     }
-   
+
 
     .navbar.scrolled {
         background-color: #808000;
         /* Olive color */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
+
 
     .container {
         display: flex;
         justify-content: center;
         gap: 20px;
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
+        height: 500;
         flex-wrap: wrap;
     }
 
@@ -248,6 +248,10 @@
             font-size: 16px;
 
         }
+
+        .navbar-nav {
+            background-color: #171d30;
+        }
     }
 
     .container-1 {
@@ -279,7 +283,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 250px;
-        
+
         padding: 0px;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -358,16 +362,86 @@
     }
 
     .overlay-text {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
+        justify-content: center;
         transform: translate(-50%, -50%);
         text-align: center;
+        padding: 10px;
+    }
+
+    .overlay-text p {
+        width: 100%;
+    }
+
+    .container-3 {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 500px;
+        overflow: hidden;
+        padding-top: 80px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        animation: scroll-left 40s linear infinite;
+    }
+
+    .card-1 {
+        flex: 0 0 30%;
+        /* Each card takes up 20% of the container's width */
+        margin: 10px;
+        height: 300px;
+        width: 400px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .card-1 img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+
+    .card-1 p {
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* Adding duplicate cards for seamless infinite scroll */
+    .cards-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: inherit;
     }
 </style>
 
 <body>
-   
+
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="Logo"
@@ -402,9 +476,55 @@
         <div class="overlay-text">
             <h1 class="bye-1"><b>India's Best Talent Acqusition </b></h1>
             <h1 class="bye-2"><b> And Job Placement Consultancy</b></h1>
+            <b>
+                <p>Unlock your potential with our consulting and hiring expertise. Reach your destination with our
+                    comprehensive consulting and training solutions.</p>
+            </b>
             <a href="#job-search" class="btn">Job Search</a>
         </div>
     </div>
+
+    <div class="container-3" style="background-color: gray;">
+        <center><h1 style="margin-bottom: 30px;"><b>Hands-on Training</b></h1></center>
+        <div class="cards-wrapper">
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/python.jpeg" alt="Card 1">
+                <p>Card 1</p>
+            </div>
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 2">
+                <p>Card 2</p>
+            </div>
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 3">
+                <p>Card 3</p>
+            </div>
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 4">
+                <p>Card 4</p>
+            </div>
+
+            <!-- Duplicate cards for seamless scroll -->
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 1">
+                <p>Card 1</p>
+            </div>
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 2">
+                <p>Card 2</p>
+            </div>
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 3">
+                <p>Card 3</p>
+            </div>
+            <div class="card-1">
+                <img src="https://via.placeholder.com/150" alt="Card 4">
+                <p>Card 4</p>
+            </div>
+
+        </div>
+    </div>
+
     <div class="container">
         <div class="box">
             <div class="icon"><i class="fas fa-search"></i></div>
@@ -419,6 +539,8 @@
             <a href="#" class="btn">Click now</a>
         </div>
     </div>
+
+
 
     <div class="main-container">
         <div class="image-container">
@@ -445,49 +567,41 @@
     </center>
     <div class="container-1">
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/android.jpeg"
-                alt="Android App Development">
+            <img src="https://www.mindloads.in/images/job/android.jpeg" alt="Android App Development">
             <p>Android App Development</p>
         </div>
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/web.jpeg"
-                alt="Enterprise Web Apps">
+            <img src="https://www.mindloads.in/images/job/web.jpeg" alt="Enterprise Web Apps">
             <p>Enterprise Web Apps</p>
         </div>
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/ai.jpeg"
-                alt="AI & Data Science">
+            <img src="https://www.mindloads.in/images/job/ai.jpeg" alt="AI & Data Science">
             <p>AI & Data Science</p>
         </div>
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/iot.jpeg"
-                alt="IOT Engineering">
+            <img src="https://www.mindloads.in/images/job/iot.jpeg" alt="IOT Engineering">
             <p>IOT Engineering</p>
         </div>
-       
+
     </div>
     <div class="container-2">
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/cloud.jpeg"
-                alt="Virtualization & Cloud">
+            <img src="https://www.mindloads.in/images/job/cloud.jpeg" alt="Virtualization & Cloud">
             <p>Virtualization & Cloud</p>
         </div>
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/support.jpeg"
-                alt="Product Support">
+            <img src="https://www.mindloads.in/images/job/support.jpeg" alt="Product Support">
             <p>Product Support</p>
         </div>
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/product.png"
-                alt="Product Development">
+            <img src="https://www.mindloads.in/images/job/product.png" alt="Product Development">
             <p>Product Development</p>
         </div>
         <div class="card">
-            <img src="https://www.mindloads.in/images/job/devOps.jpeg"
-                alt="High Performance Devops">
+            <img src="https://www.mindloads.in/images/job/devOps.jpeg" alt="High Performance Devops">
             <p>High Performance Devops</p>
         </div>
-        
+
     </div>
     <script>
 
@@ -536,20 +650,22 @@
                     <ul class="list-unstyled">
                         <li><i class="fas fa-envelope"></i> <a
                                 href="mailto:letsofferjob@gmail.com">letsofferjob@gmail.com</a></li>
-                        <li><i class="fas fa-phone"></i> +91 85550 79906</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Vijaywada, India</li>
+                        <li><i class="fas fa-phone"></i> +91 86181 51740
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No
+                                112, 1st floor, Shirdi Sai Nagar, RK Hegde Nagar, Bengaluru, Karnataka, India,
+                                560077.</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Follow Us</h5>
                     <div class="social-icons">
-                        <a href="https://youtube.com/@letsofferjob?si=lAPZToRRHPudoyaP" class="fab fa-youtube"
-                            aria-label="YouTube"></a>
+
 
                         <a href="#" class="fab fa-linkedin-in" aria-label="LinkedIn"></a>
                         <a href="https://www.instagram.com/letsofferjob?igsh=c2hwcThueHY3enk=" class="fab fa-instagram"
                             aria-label="Instagram"></a>
-                        <a href="https://t.me/letsofferjob" class="fab fa-telegram-plane" aria-label="Telegram"></a>
+
                         <a href="#" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
                         <a href="mailto:letsofferjob@gmail.com" class="fas fa-envelope" aria-label="Gmail"></a>
                     </div>
@@ -557,7 +673,7 @@
             </div>
         </div>
         <div class="text-center">
-            <p>&copy; 2024 Lets Offer Job - Job Revolution. All rights reserved.</p>
+            <p>&copy; 2025 Future Path IT Solutions. All rights reserved.</p>
         </div>
     </div>
     <script>
