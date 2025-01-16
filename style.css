@@ -19,22 +19,16 @@ body {
     text-decoration: none;
   }
   .navbar{
-    background-color: #808000;
+    background-color: #c11c1c;
   }
   
   .navbar a:hover {
     background-color: #000000;
     color: #ffffff;
+    border-radius: 5px;
   }
   
   /* Add spacing between navbar and footer */
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    margin-top: 20px; /* Add space below the navbar */
-    margin-bottom: 20px; /* Add space above the footer */
-  }
   
   /* Content Styling */
   .content {
@@ -47,7 +41,7 @@ body {
   
   /* Footer Styling */
   .footer {
-    background-color:#808000;
+    background-color:#c11c1c;
     color: white;
     padding: 20px 0;
     position: relative;
@@ -142,3 +136,4 @@ body {
     margin-left: 20px;
   }
   
+/* General Reset */
