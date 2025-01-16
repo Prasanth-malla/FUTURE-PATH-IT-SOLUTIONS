@@ -167,11 +167,89 @@
         font-size: 12px;
       }
     }
-  </style>
-</head>
+    /* WhatsApp Icon Base */
+    /* WhatsApp Icon Base */
+    /* WhatsApp Icon Base */
+    .whatsapp-icon {
+        position: fixed;
+        top: 50%;
+        /* Default vertical center */
+        left: 20px;
+        /* Default left position */
+        transform: translateY(-50%);
+        /* Center vertically */
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        border-radius: 50%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        cursor: grab;
+        /* Indicate draggable functionality */
+        transition: transform 0.2s ease;
+    }
+
+    /* Hover Effect */
+    .whatsapp-icon:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Icon Image Styling */
+    .whatsapp-icon img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    /* Responsive for Mobile */
+    @media screen and (max-width: 768px) {
+        .whatsapp-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+</style>
 
 <body>
+    <!-- WhatsApp Icon -->
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/8618151740" target="_blank" class="whatsapp-icon" id="draggable-icon"
+        title="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
 
+    <script>
+        // Make the WhatsApp icon draggable
+const icon = document.getElementById("draggable-icon");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+icon.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - icon.getBoundingClientRect().left;
+    offsetY = e.clientY - icon.getBoundingClientRect().top;
+    icon.style.cursor = "grabbing"; // Change cursor on drag
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        const newX = e.clientX - offsetX;
+        const newY = e.clientY - offsetY;
+
+        // Set new position for the icon
+        icon.style.left = `${newX}px`;
+        icon.style.top = `${newY}px`;
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    icon.style.cursor = "grab"; // Reset cursor after drag
+});
+
+    </script>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo"
         style="height: 50px; width: 150px; border-radius: 5px;"></a>
