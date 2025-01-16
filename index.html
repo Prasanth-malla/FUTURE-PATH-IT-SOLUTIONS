@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Path IT Solutions</title>
+    <title>Lets Offer Job</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -35,7 +35,7 @@
         justify-content: center;
         gap: 20px;
         width: 100%;
-        height: 500;
+        margin-top: 50px;
         flex-wrap: wrap;
     }
 
@@ -389,7 +389,7 @@
 
     .cards-wrapper {
         display: flex;
-        animation: scroll-left 40s linear infinite;
+        animation: scroll-left 50s linear infinite;
     }
 
     .card-1 {
@@ -408,7 +408,7 @@
 
     .card-1 img {
         width: 100%;
-        height: 270px;
+        height: 250px;
         object-fit: cover;
     }
 
@@ -428,7 +428,10 @@
         }
     }
 
+
     /* Adding duplicate cards for seamless infinite scroll */
+
+
     .cards-wrapper::after {
         content: "";
         position: absolute;
@@ -437,6 +440,99 @@
         width: 100%;
         height: 100%;
         background: inherit;
+    }
+
+    @media (max-width: 768px) {
+
+        /* Tablet View */
+        .container-3 {
+            padding: 10px;
+            padding-top: 50px;
+            height: auto;
+            /* Allow dynamic height */
+            overflow: hidden;
+            /* Hide any overflow */
+            height: 400px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            gap: 15px;
+            /* Space between cards */
+            animation: scroll-left 50s linear infinite;
+            width: max-content;
+            /* Allow the wrapper to expand to fit all cards */
+        }
+
+        .card-1 {
+            flex: 0 0 auto;
+            /* Prevent cards from shrinking */
+            margin: 0 auto;
+            /* Center cards */
+            width: 200px;
+            /* Adjust width for better visibility on smaller screens */
+            height: 260px;
+            /* Card height */
+        }
+
+        .card-1 img {
+            width: 200px;
+            /* Ensure images are responsive */
+            height: 200px;
+            /* Adjust image height */
+            object-fit: cover;
+            /* Maintain image proportions */
+        }
+
+        .card-1 p {
+            font-size: 14px;
+            /* Adjust font size */
+            padding: 8px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        /* Mobile View */
+        .container-3 {
+            padding: 10px;
+            padding-top: 30px;
+            height: auto;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .cards-wrapper {
+            display: flex;
+            gap: 20px;
+            /* Space between cards */
+            animation: scroll-left 50s linear infinite;
+            /* Adjust animation speed */
+            width: max-content;
+            /* Allow all cards to fit */
+        }
+
+        .card-1 {
+            flex: 0 0 auto;
+            /* Prevent cards from shrinking */
+            margin: 0 auto;
+            width: 200px;
+            /* Cards take most of the screen width */
+            height: 260px;
+            /* Adjust card height for small screens */
+        }
+
+        .card-1 img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-1 p {
+            font-size: 12px;
+            /* Smaller text size for mobile */
+            padding: 5px;
+        }
     }
 </style>
 
@@ -485,60 +581,105 @@
     </div>
 
     <div class="container-3" style="background-color: gray;">
-        <center><h1 style="margin-bottom: 30px;"><b>Hands-on Training</b></h1></center>
+        <center>
+            <h1 style="margin-bottom: 30px;"><b>Hands-on Training</b></h1>
+        </center>
         <div class="cards-wrapper">
             <div class="card-1">
-                <img src="https://www.mindloads.in/images/training/python.jpeg" alt="Card 1">
-                <p>Card 1</p>
+                <img src="https://cdn.wallpapersafari.com/86/47/beOFkU.jpg" alt="Card 1">
+                <h2><b>Python Developer</b></h2>
             </div>
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 2">
-                <p>Card 2</p>
+                <img src="https://www.mindloads.in/images/training/javaDeveloper.jpg" alt="Card 2">
+                <h2><b>Java Developer</b></h2>
             </div>
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 3">
-                <p>Card 3</p>
+                <img src="https://www.mindloads.in/images/training/sapDeveloper.jpeg" alt="Card 3">
+                <h2><b>SAP All Modules</b></h2>
             </div>
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 4">
-                <p>Card 4</p>
+                <img src="https://www.mindloads.in/images/training/devops.jpeg" alt="Card 4">
+                <h2><b>DevOps AWS</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/azure.jpeg" alt="Card 1">
+                <h2><b>DevOps Azure</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/softwareTesting.jpeg" alt="Card 2">
+                <h2><b>Software Testing</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/it.jpeg" alt="Card 3">
+                <h2><b>IT Hardware / Networking / ITIL</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://wallpapercave.com/wp/wp11500504.jpg" alt="Card 4">
+                <h2><b>Power BI</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/cloud.jpeg" alt="Card 4">
+                <h2><b>Salesforce Developer</b></h2>
             </div>
 
             <!-- Duplicate cards for seamless scroll -->
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 1">
-                <p>Card 1</p>
+                <img src="https://cdn.wallpapersafari.com/86/47/beOFkU.jpg" alt="Card 1">
+                <h2><b>Python Developer</b></h2>
             </div>
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 2">
-                <p>Card 2</p>
+                <img src="https://www.mindloads.in/images/training/javaDeveloper.jpg" alt="Card 2">
+                <h2><b>Java Developer</b></h2>
             </div>
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 3">
-                <p>Card 3</p>
+                <img src="https://www.mindloads.in/images/training/sapDeveloper.jpeg" alt="Card 3">
+                <h2><b>SAP All Modules</b></h2>
             </div>
             <div class="card-1">
-                <img src="https://via.placeholder.com/150" alt="Card 4">
-                <p>Card 4</p>
+                <img src="https://www.mindloads.in/images/training/devops.jpeg" alt="Card 4">
+                <h2><b>DevOps AWS</b></h2>
             </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/azure.jpeg" alt="Card 1">
+                <h2><b>DevOps Azure</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/softwareTesting.jpeg" alt="Card 2">
+                <h2><b>Software Testing</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/it.jpeg" alt="Card 3">
+                <h2><b>IT Hardware / Networking / ITIL</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://wallpapercave.com/wp/wp11500504.jpg" alt="Card 4">
+                <h2><b>Power BI</b></h2>
+            </div>
+            <div class="card-1">
+                <img src="https://www.mindloads.in/images/training/cloud.jpeg" alt="Card 4">
+                <h2><b>Salesforce Developer</b></h2>
+            </div>
+
 
         </div>
     </div>
+
+    <center><h1 style="margin-top: 30px;"><b>Services</b></h1></center>
 
     <div class="container">
         <div class="box">
             <div class="icon"><i class="fas fa-search"></i></div>
             <h3>Job Seeker</h3>
             <p>Candidate looking for jobs</p>
-            <a href="#" class="btn">Click now</a>
+            <a href="" class="btn">Click now</a>
         </div>
         <div class="box">
             <div class="icon"><i class="fas fa-briefcase"></i></div>
             <h3>Business Tie up</h3>
             <p>Employers looking for Candidates</p>
-            <a href="#" class="btn">Click now</a>
+            <a href="contact.html" class="btn">Click now</a>
         </div>
-    </div>
+    </div><br>
 
 
 
@@ -557,7 +698,7 @@
                 seekers. We also act as a guide to the Job searchers and help them with their Career prospects. We have
                 our expertise in this domain to offer specific solutions for different needs and purposes to both
                 Employers as well as Prospective Candidates. </p>
-            <a href="#" class="btn">Read More</a>
+            <a href="about.html" class="btn">Read More</a>
         </div>
     </div><br>
 
