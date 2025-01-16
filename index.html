@@ -375,25 +375,25 @@
         0% {
             background-image: url(1.png);
             background-size: cover;
-        background-position: center;
+            background-position: center;
         }
 
         33% {
             background-image: url(2.png);
             background-size: cover;
-        background-position: center;
+            background-position: center;
         }
 
         66% {
             background-image: url(3.png);
             background-size: cover;
-        background-position: center;
+            background-position: center;
         }
 
         100% {
             background-image: url(4.png);
             background-size: cover;
-        background-position: center;
+            background-position: center;
         }
     }
 
@@ -587,48 +587,90 @@
             padding: 5px;
         }
     }
+
     /* WhatsApp Icon Base */
-.whatsapp-icon {
-    position: fixed;
-    bottom: 20px; /* Distance from the bottom of the viewport */
-    right: 20px; /* Distance from the right of the viewport */
-    width: 60px; /* Icon size for desktop */
-    height: 60px;
-    z-index: 1000; /* Ensure it appears on top of other elements */
-    border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-}
-
-/* WhatsApp Icon Hover Effect */
-.whatsapp-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Enhance the shadow on hover */
-}
-
-/* Icon Image Styling */
-.whatsapp-icon img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 100%;
-    border-radius: 50%;
-}
-
-/* Responsive for Mobile */
-@media screen and (max-width: 768px) {
+    /* WhatsApp Icon Base */
+    /* WhatsApp Icon Base */
     .whatsapp-icon {
-        width: 50px; /* Slightly smaller icon for mobile */
-        height: 50px;
-        bottom: 15px; /* Adjust position for smaller screens */
-        right: 15px;
+        position: fixed;
+        top: 50%;
+        /* Default vertical center */
+        left: 20px;
+        /* Default left position */
+        transform: translateY(-50%);
+        /* Center vertically */
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        border-radius: 50%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        cursor: grab;
+        /* Indicate draggable functionality */
+        transition: transform 0.2s ease;
     }
-}
 
+    /* Hover Effect */
+    .whatsapp-icon:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Icon Image Styling */
+    .whatsapp-icon img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    /* Responsive for Mobile */
+    @media screen and (max-width: 768px) {
+        .whatsapp-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
 </style>
 
 <body>
-     <a href="https://wa.me/yourphonenumber" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
+    <!-- WhatsApp Icon -->
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/8618151740" target="_blank" class="whatsapp-icon" id="draggable-icon"
+        title="Chat with us on WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     </a>
+
+    <script>
+        // Make the WhatsApp icon draggable
+const icon = document.getElementById("draggable-icon");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+icon.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - icon.getBoundingClientRect().left;
+    offsetY = e.clientY - icon.getBoundingClientRect().top;
+    icon.style.cursor = "grabbing"; // Change cursor on drag
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        const newX = e.clientX - offsetX;
+        const newY = e.clientY - offsetY;
+
+        // Set new position for the icon
+        icon.style.left = `${newX}px`;
+        icon.style.top = `${newY}px`;
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    icon.style.cursor = "grab"; // Reset cursor after drag
+});
+
+    </script>
 
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
@@ -901,7 +943,7 @@
                         <a href="https://www.instagram.com/letsofferjob?igsh=c2hwcThueHY3enk=" class="fab fa-instagram"
                             aria-label="Instagram"></a>
 
-                        <a href="#" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
+                        <a href="https://wa.me/8618151740" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
                         <a href="mailto:letsofferjob@gmail.com" class="fas fa-envelope" aria-label="Gmail"></a>
                     </div>
                 </div>
