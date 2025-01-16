@@ -587,9 +587,48 @@
             padding: 5px;
         }
     }
+    /* WhatsApp Icon Base */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    right: 20px; /* Distance from the right of the viewport */
+    width: 60px; /* Icon size for desktop */
+    height: 60px;
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* WhatsApp Icon Hover Effect */
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Enhance the shadow on hover */
+}
+
+/* Icon Image Styling */
+.whatsapp-icon img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    .whatsapp-icon {
+        width: 50px; /* Slightly smaller icon for mobile */
+        height: 50px;
+        bottom: 15px; /* Adjust position for smaller screens */
+        right: 15px;
+    }
+}
+
 </style>
 
 <body>
+     <a href="https://wa.me/yourphonenumber" target="_blank" class="whatsapp-icon" title="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
 
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
