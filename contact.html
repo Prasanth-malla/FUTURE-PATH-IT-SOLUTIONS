@@ -2,9 +2,8 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Path IT Solutions</title>
+  <title>Lets Offer Job</title>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -79,102 +78,102 @@
     }
 
     /* Responsive styles for smaller devices */
- @media (max-width: 991.98px) {
-  /* Tablet View */
-  .container-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-  }
+    @media (max-width: 991.98px) {
 
-  .left-section,
-  .right-section {
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-    margin-bottom: 20px;
-  }
+      /* Tablet View */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+      }
 
-  .left-section {
-    border-radius: 5px;
-  }
-}
+      .left-section,
+      .right-section {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 20px;
+      }
 
-@media (max-width: 768px) {
-  /* Mobile View */
-  .container-1 {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    margin-top: 80px;
-  }
+      .left-section {
+        border-radius: 5px;
+      }
+    }
 
-  .left-section h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+    @media (max-width: 768px) {
 
-  .left-section p {
-    font-size: 14px;
-  }
+      /* Mobile View */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 80px;
+      }
 
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-  }
+      .left-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
 
-  button {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-}
+      .left-section p {
+        font-size: 14px;
+      }
 
-@media (max-width: 480px) {
-  /* Extra Small Mobile View */
-  .container-1 {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    margin-top: 80px;
-  }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+      }
 
-  .left-section {
-    text-align: center;
-    padding: 10px;
-  }
+      button {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+    }
 
-  .left-section h2 {
-    font-size: 16px;
-  }
+    @media (max-width: 480px) {
 
-  .left-section p {
-    font-size: 12px;
-  }
+      /* Extra Small Mobile View */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 80px;
+      }
 
-  .form-group input,
-  .form-group textarea {
-    padding: 6px;
-    font-size: 12px;
-  }
+      .left-section {
+        text-align: center;
+        padding: 10px;
+      }
 
-  button {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
-}
+      .left-section h2 {
+        font-size: 16px;
+      }
 
+      .left-section p {
+        font-size: 12px;
+      }
 
-   
+      .form-group input,
+      .form-group textarea {
+        padding: 6px;
+        font-size: 12px;
+      }
+
+      button {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo"
-        style="height: 50px; width: 150px; border-radius: 5px;"></a>
+    <a class="navbar-brand" href="index.html"><img src="logo.jpg" alt="Logo"
+        style="height: 50px; width: 55px; border-radius: 100%;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -197,12 +196,15 @@
       </ul>
     </div>
 
-  </nav>
+  </nav><br>
+
+  
 
   <div class="container-1">
+      
     <div class="left-section">
       <h2>Contact Support</h2>
-      <p>Already a customer or need help with a billing issue?</p>
+
 
       <p><i class="fas fa-map-marker-alt"></i><a style="color: white;"
           href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No
@@ -222,36 +224,61 @@
     </div>
 
     <div class="right-section">
-      <form>
+      <form id="emailForm">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your Name">
+          <input type="text" id="name" placeholder="Your Name" required>
         </div>
-
+    
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Your Email">
+          <input type="email" id="email" placeholder="Your Email" required>
         </div>
-
+    
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" placeholder="Your Phone">
+          <input type="tel" id="phone" placeholder="Your Phone" required>
         </div>
-
+    
         <div class="form-group">
           <label for="graduation">Year of Graduation</label>
-          <input type="date" id="graduation">
+          <input type="date" id="graduation" required>
         </div>
-
+    
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" placeholder="Leave your Message for Us"></textarea>
+          <textarea id="message" placeholder="Leave your Message for Us" required></textarea>
         </div>
-
+    
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
+    
+    <script>
+      document.getElementById("emailForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+    
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const graduation = document.getElementById("graduation").value;
+        const message = document.getElementById("message").value;
+    
+        // Create the mailto link
+        const subject = encodeURIComponent("Contact Form Submission");
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nYear of Graduation: ${graduation}\nMessage: ${message}`
+        );
+    
+        const mailtoLink = `mailto:m8970652@gmail.com?subject=${subject}&body=${body}`;
+    
+        // Open the email client
+        window.location.href = mailtoLink;
+      });
+    </script>
+    
   <div class="footer">
     <div class="container">
       <div class="row">
