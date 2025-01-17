@@ -355,27 +355,17 @@
     /* Define the keyframes for the slideshow animation */
   @keyframes slideshow {
     0% {
-        background-image: url(2.png);
+        background-image: url(1.png);
         background-size: cover; /* Show half the image width */
     }
 
-    33.33% {
+    33% {
         background-image: url(2.png);
         background-size: cover;
     }
 
-    33.34% {
+    66% {
         background-image: url(3.png);
-       background-size: cover;
-    }
-
-    66.66% {
-        background-image: url(3.png);
-       background-size: cover;
-    }
-
-    66.67% {
-        background-image: url(4.png);
        background-size: cover;
     }
 
@@ -383,20 +373,11 @@
         background-image: url(4.png);
        background-size: cover;
     }
-}
-
-    @media (max-width: 768px) {
-        .hero-container::before {
-            /* Double the width so half of the image is visible */
-            background-position: left;
-
-            /* Start with the left half of the image */
-
-        }
 
     
+}
 
-    }
+    
 
     .overlay-text {
         position: relative;
